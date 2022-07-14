@@ -1,0 +1,84 @@
+
+
+ 
+ <section class="section-intro bg-primary padding-y-lg">
+	<div class="container">
+
+	  <article class="my-5">
+       <p class= "display-4 text-white"> This is Admin page </p> 
+       <p class="lead text-white">To connect that page login again</p>
+	    
+        <button class="btn btn-primary" class="nav-link" routerLink="/user" >See the User</button>
+        <br>
+        <button class="btn btn-primary" class="nav-link" routerLink="/product" >see products</button>
+        <br>
+        <button class="btn btn-primary" class="nav-link" routerLink="/categories" >see product categories</button>
+        <br>
+	    
+	  </article>
+
+	</div> <!-- container end.// -->
+</section>
+
+<h1> add product and see order details </h1>
+<table>
+    <tr>
+        <td>Product Name</td>
+        <td>
+            <input [(ngModel)]="adminModel.productName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Product type</td>
+        <td>
+            <input [(ngModel)]="adminModel.productDescription" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Cat Id</td>
+        <td>
+            <input [(ngModel)]="adminModel.catID" type="text">
+        </td>
+    </tr>
+    
+    <tr>
+        <td>upload product</td>
+        <td>
+            
+            <input [(ngModel)]="adminModel.productImage" type="file" id="formFileMultiple">       </td>
+    </tr>
+    <input type="submit" (click)="Addadmin()">
+    <input type="button" (click)="getData()" value="see order product"/>
+</table>
+<!-- {{CustomerModel.CustomerAmount}}
+{{CustomerModel.CustomerName}}
+{{CustomerModel.CustomerCode}} -->
+
+<table border="2">
+    <tr>
+        <td>Product name</td>
+        <td>Product description</td>
+        <td>cat id</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let Product of adminModels">
+        <td>
+            {{Product.productName}}
+        </td>
+        <td> {{Product.productDescription}}
+        </td>
+        <td> {{Product.catID}}
+        </td>
+        <td>
+            <td> {{Product.productImage}}
+            </td>
+            <td>
+    
+
+            
+
+            <input type="button" value="Edit" (click)="EditCustomer(Product)" />
+            <input type="button" value="Delete" (click)="DeleteCustomer(Product)" />
+        </td>
+    </tr>
+</table>

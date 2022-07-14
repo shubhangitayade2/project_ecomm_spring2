@@ -1,0 +1,51 @@
+
+
+
+    <table>
+      <tr>
+          <td>FirstName</td>
+          <td>
+              <input [(ngModel)]="paymentModel.FirstName" type="text">
+          </td>
+      </tr>
+      <tr>
+          <td>SurName</td>
+          <td>
+              <input [(ngModel)]="paymentModel.SurName" type="text">
+          </td>
+      </tr>
+      <tr>
+          <td>CardNumber</td>
+          <td>
+              <input [(ngModel)]="paymentModel.CardNumber" type="text">
+          </td>
+      </tr>
+      <tr>
+        <td>StreedAddress</td>
+        <td>
+            <input [(ngModel)]="paymentModel.StreedAddress" type="text">
+        </td>
+    </tr> <tr>
+      <td>City</td>
+      <td>
+          <input [(ngModel)]="paymentModel.City" type="text">
+      </td>
+  </tr> <tr>
+    <td>ZipCode</td>
+    <td>
+        <input [(ngModel)]="paymentModel.ZipCode" type="text">
+    </td>
+</tr> <tr>
+  <td>Email</td>
+  <td>
+      <input [(ngModel)]="paymentModel.Email" type="text">
+  </td>
+</tr>
+      <input type="submit" (click)="Addpayment()">
+      <input type="button" (click)="getData()" value="see order product"/>
+  </table>
+  <!-- {{CustomerModel.CustomerAmount}}
+  {{CustomerModel.CustomerName}}
+  {{CustomerModel.CustomerCode}} -->
+  
+  
